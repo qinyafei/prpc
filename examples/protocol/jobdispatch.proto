@@ -1,0 +1,31 @@
+syntax = "proto2";
+package JobDispatch;
+
+option cc_generic_services = true;
+
+
+message TaskEntity{
+     required string id = 1;
+     required string name = 2;
+     required string tasktype = 3;
+     required string timemode = 4;
+     required string plantimer = 5;
+     optional string args = 6; 
+     optional string result = 7; 
+     optional string remarks = 8;
+}
+
+message TaskRequest{
+     required TaskEntity task = 1;
+}
+
+message TaskResponse{
+     optional string response = 1;
+}
+
+
+service JobDispatchService{
+rpc add (TaskRequest) returns (TaskResponse);
+rpc del (TaskRequest) returns (TaskResponse);
+rpc edit (TaskRequest) returns (TaskResponse);
+}

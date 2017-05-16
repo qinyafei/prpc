@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A63F6A7A-0570-4154-BC4F-075FB9FA3AD4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\exam_client.cpp" />
+    <ClCompile Include="examples\exam_server.cpp" />
+    <ClCompile Include="examples\protocol\jobdispatch.pb.cc" />
+    <ClCompile Include="examples\SchedulerRpc.cpp" />
+    <ClCompile Include="examples\TaskRunningRpc.cpp" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\any.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\any.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\any_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\api.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\arena.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\arenastring.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\arenastring_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\arena_nc.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\arena_test_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\arena_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\code_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\command_line_interface.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\command_line_interface_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_bootstrap_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_enum.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_enum_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_extension.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_file.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_helpers.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_map_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_message.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_message_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_plugin_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_primitive_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_service.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_string_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\metadata_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_doc_comment.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_enum.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_enum_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_field_base.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_generator_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_helpers.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_map_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_message.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_message_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_primitive_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_reflection_class.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_repeated_enum_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_repeated_message_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_repeated_primitive_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_source_generator_base.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_wrapper_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\importer.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\importer_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_enum.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_enum_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_extension.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_file.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_helpers.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_map_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_message.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_message_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_primitive_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_context.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_doc_comment.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_doc_comment_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum_field_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_extension.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_extension_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_file.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_generator_factory.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_helpers.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_lazy_message_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_lazy_message_field_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_map_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_map_field_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_builder.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_builder_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_field_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_name_resolver.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_plugin_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_primitive_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_primitive_field_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_service.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_shared_code_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_string_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_string_field_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\js\js_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\main.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\mock_code_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_enum.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_enum_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_extension.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_file.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_helpers.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_helpers_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_map_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_message.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_message_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_oneof.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_primitive_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\parser.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\parser_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\plugin.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\plugin.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\python\python_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\python\python_plugin_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\ruby\ruby_generator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\ruby\ruby_generator_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\subprocess.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\test_plugin.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\compiler\zip_writer.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\descriptor.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\descriptor.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\descriptor_database.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\descriptor_database_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\descriptor_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\drop_unknown_fields_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\duration.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\dynamic_message.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\dynamic_message_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\empty.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\extension_set.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\extension_set_heavy.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\extension_set_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\field_mask.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\generated_message_reflection.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\generated_message_reflection_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\generated_message_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\coded_stream.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\coded_stream_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\gzip_stream.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\printer.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\printer_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\strtod.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\tokenizer.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\tokenizer_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\zero_copy_stream.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\zero_copy_stream_impl.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\zero_copy_stream_impl_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\io\zero_copy_stream_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\lite_arena_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\lite_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\map_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\map_field_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\map_lite_test_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\map_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\map_test_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\message.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\message_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\message_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\no_field_presence_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\preserve_unknown_enum_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\proto3_arena_lite_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\proto3_arena_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\proto3_lite_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\reflection_ops.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\reflection_ops_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\repeated_field.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\repeated_field_reflection_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\repeated_field_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\service.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\source_context.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\struct.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_x86_gcc.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_x86_msvc.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\bytestream.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\bytestream_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\common.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\common_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\int128.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\int128_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\mathlimits.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\once.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\once_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\status.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\statusor.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\statusor_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\status_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\stringpiece.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\stringpiece_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\stringprintf.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\stringprintf_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\structurally_valid.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\structurally_valid_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\strutil.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\strutil_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\substitute.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\template_util_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\time.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\time_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\stubs\type_traits_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\testing\file.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\testing\googletest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\testing\zcgunzip.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\testing\zcgzip.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\test_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\test_util_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\text_format.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\text_format_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\timestamp.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\type.pb.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\unknown_field_set.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\unknown_field_set_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\field_comparator.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\field_comparator_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\field_mask_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\field_mask_util_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\datapiece.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\default_value_objectwriter.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\default_value_objectwriter_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\error_listener.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\field_mask_utility.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_escaping.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_objectwriter.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_objectwriter_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_stream_parser.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_stream_parser_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\object_writer.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\protostream_objectsource.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\protostream_objectsource_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\protostream_objectwriter.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\protostream_objectwriter_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\proto_writer.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\type_info.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\type_info_test_helper.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\internal\utility.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\json_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\json_util_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\message_differencer.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\message_differencer_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\time_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\time_util_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\type_resolver_util.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\util\type_resolver_util_test.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\well_known_types_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\wire_format.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\wire_format_lite.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\wire_format_unittest.cc" />
+    <ClCompile Include="include\protorpc\include_protobuf\google\protobuf\wrappers.pb.cc" />
+    <ClCompile Include="include\protorpc\proto\rpc.pb.cc" />
+    <ClCompile Include="include\protorpc\proto\rpcservice.pb.cc" />
+    <ClCompile Include="src\base\BCFProcessCreater.cpp" />
+    <ClCompile Include="src\base\BlockQueue.cpp" />
+    <ClCompile Include="src\base\Buffer.cpp" />
+    <ClCompile Include="src\base\DefaultImplement.cpp" />
+    <ClCompile Include="src\base\EventHandler.cpp" />
+    <ClCompile Include="src\base\Poller.cpp" />
+    <ClCompile Include="src\base\Reactor.cpp" />
+    <ClCompile Include="src\base\ReactorThread.cpp" />
+    <ClCompile Include="src\base\ReactorThreadPool.cpp" />
+    <ClCompile Include="src\base\SelectPoller.cpp" />
+    <ClCompile Include="src\base\Singleton.cpp" />
+    <ClCompile Include="src\base\SocketOpts.cpp" />
+    <ClCompile Include="src\base\TbbWrapper.cpp" />
+    <ClCompile Include="src\base\Thread.cpp" />
+    <ClCompile Include="src\base\ThreadPool.cpp" />
+    <ClCompile Include="src\base\Timer.cpp" />
+    <ClCompile Include="src\base\TimerAlgorithm.cpp" />
+    <ClCompile Include="src\base\TimerQueue.cpp" />
+    <ClCompile Include="src\base\Timestamp.cpp" />
+    <ClCompile Include="src\glog\GlogWrapper.cpp" />
+    <ClCompile Include="src\net\Acceptor.cpp" />
+    <ClCompile Include="src\net\Connector.cpp" />
+    <ClCompile Include="src\net\NetClient.cpp" />
+    <ClCompile Include="src\net\NetConnection.cpp" />
+    <ClCompile Include="src\net\NetServer.cpp" />
+    <ClCompile Include="src\protorpc\CustomRpcChannel.cpp" />
+    <ClCompile Include="src\protorpc\RpcClient.cpp" />
+    <ClCompile Include="src\protorpc\RpcCodec.cpp" />
+    <ClCompile Include="src\protorpc\RpcServer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="examples\protocol\jobdispatch.pb.h" />
+    <ClInclude Include="examples\SchedulerRpc.h" />
+    <ClInclude Include="examples\TaskRunningRpc.h" />
+    <ClInclude Include="include\base\BCFProcessCreater.hpp" />
+    <ClInclude Include="include\base\BlockQueue.h" />
+    <ClInclude Include="include\base\Buffer.h" />
+    <ClInclude Include="include\base\common.h" />
+    <ClInclude Include="include\base\Condition.h" />
+    <ClInclude Include="include\base\EventHandler.h" />
+    <ClInclude Include="include\base\MutexLock.h" />
+    <ClInclude Include="include\base\noncopyable.h" />
+    <ClInclude Include="include\base\Poller.h" />
+    <ClInclude Include="include\base\Reactor.h" />
+    <ClInclude Include="include\base\ReactorThread.h" />
+    <ClInclude Include="include\base\ReactorThreadPool.h" />
+    <ClInclude Include="include\base\SelectPoller.h" />
+    <ClInclude Include="include\base\Singleton.h" />
+    <ClInclude Include="include\base\SocketOpts.h" />
+    <ClInclude Include="include\base\TbbWrapper.h" />
+    <ClInclude Include="include\base\Thread.h" />
+    <ClInclude Include="include\base\ThreadPool.h" />
+    <ClInclude Include="include\base\Timer.h" />
+    <ClInclude Include="include\base\TimerAlgorithm.h" />
+    <ClInclude Include="include\base\TimerQueue.h" />
+    <ClInclude Include="include\base\Timestamp.h" />
+    <ClInclude Include="include\glog\GlogWrapper.h" />
+    <ClInclude Include="include\glog\glog\logging.h" />
+    <ClInclude Include="include\glog\glog\log_severity.h" />
+    <ClInclude Include="include\glog\glog\raw_logging.h" />
+    <ClInclude Include="include\glog\glog\stl_logging.h" />
+    <ClInclude Include="include\glog\glog\vlog_is_on.h" />
+    <ClInclude Include="include\net\Acceptor.h" />
+    <ClInclude Include="include\net\Connector.h" />
+    <ClInclude Include="include\net\NetCallbacks.h" />
+    <ClInclude Include="include\net\NetClient.h" />
+    <ClInclude Include="include\net\NetConnection.h" />
+    <ClInclude Include="include\net\NetServer.h" />
+    <ClInclude Include="include\protorpc\CustomRpcChannel.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\any.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\any.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\api.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\arena.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\arenastring.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\arena_test_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\code_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\command_line_interface.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_enum.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_enum_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_extension.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_file.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_helpers.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_map_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_message.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_message_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_options.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_primitive_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_service.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_string_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\cpp\cpp_unittest.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_doc_comment.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_enum.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_enum_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_field_base.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_helpers.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_map_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_message.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_message_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_names.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_options.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_primitive_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_reflection_class.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_repeated_enum_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_repeated_message_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_repeated_primitive_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_source_generator_base.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\csharp\csharp_wrapper_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\importer.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_enum.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_enum_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_extension.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_file.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_helpers.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_map_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_message.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_message_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_params.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\javanano\javanano_primitive_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_context.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_doc_comment.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum_field_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_enum_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_extension.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_extension_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_file.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_generator_factory.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_helpers.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_lazy_message_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_lazy_message_field_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_map_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_map_field_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_builder.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_builder_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_field_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_message_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_names.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_name_resolver.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_options.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_primitive_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_primitive_field_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_service.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_shared_code_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_string_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\java\java_string_field_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\js\js_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\mock_code_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_enum.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_enum_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_extension.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_file.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_helpers.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_map_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_message.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_message_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_oneof.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\objectivec\objectivec_primitive_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\package_info.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\parser.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\plugin.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\plugin.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\python\python_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\ruby\ruby_generator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\subprocess.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\compiler\zip_writer.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\descriptor.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\descriptor.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\descriptor_database.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\duration.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\dynamic_message.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\empty.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\extension_set.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\field_mask.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\generated_enum_reflection.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\generated_enum_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\generated_message_reflection.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\generated_message_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\coded_stream.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\coded_stream_inl.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\gzip_stream.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\package_info.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\printer.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\strtod.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\tokenizer.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\zero_copy_stream.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\zero_copy_stream_impl.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\io\zero_copy_stream_impl_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_entry.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_entry_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_field_inl.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_field_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_lite_test_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_test_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_test_util_impl.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\map_type_handler.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\message.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\message_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\metadata.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\package_info.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\reflection.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\reflection_internal.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\reflection_ops.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\repeated_field.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\repeated_field_reflection.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\service.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\source_context.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\struct.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_arm64_gcc.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_arm_gcc.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_arm_qnx.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_atomicword_compat.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_generic_gcc.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_macosx.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_mips_gcc.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_pnacl.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_power.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_ppc_gcc.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_solaris.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_tsan.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_x86_gcc.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomicops_internals_x86_msvc.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\atomic_sequence_num.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\bytestream.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\callback.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\casts.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\common.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\fastmem.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\hash.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\int128.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\logging.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\macros.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\map_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\mathlimits.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\mathutil.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\mutex.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\once.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\platform_macros.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\port.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\scoped_ptr.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\shared_ptr.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\singleton.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\status.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\statusor.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\status_macros.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\stl_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\stringpiece.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\stringprintf.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\strutil.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\substitute.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\template_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\time.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\stubs\type_traits.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\testing\file.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\testing\googletest.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\test_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\test_util_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\text_format.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\timestamp.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\type.pb.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\unknown_field_set.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\field_comparator.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\field_mask_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\constants.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\datapiece.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\default_value_objectwriter.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\error_listener.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\expecting_objectwriter.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\field_mask_utility.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_escaping.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_objectwriter.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\json_stream_parser.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\location_tracker.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\mock_error_listener.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\object_location_tracker.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\object_source.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\object_writer.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\protostream_objectsource.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\protostream_objectwriter.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\proto_writer.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\structured_objectwriter.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\type_info.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\type_info_test_helper.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\internal\utility.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\json_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\message_differencer.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\time_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\type_resolver.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\util\type_resolver_util.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\wire_format.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\wire_format_lite.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\wire_format_lite_inl.h" />
+    <ClInclude Include="include\protorpc\include_protobuf\google\protobuf\wrappers.pb.h" />
+    <ClInclude Include="include\protorpc\proto\rpc.pb.h" />
+    <ClInclude Include="include\protorpc\proto\rpcservice.pb.h" />
+    <ClInclude Include="include\protorpc\RpcClient.h" />
+    <ClInclude Include="include\protorpc\RpcCodec.h" />
+    <ClInclude Include="include\protorpc\RpcServer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

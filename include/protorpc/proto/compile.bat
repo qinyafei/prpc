@@ -1,0 +1,1 @@
+E:\VMR\VMR-design\proto\proto\protoc\protoc.exe -I=E:\VMR\VMR-design\design\vmr-ps\test_vmr\proto --cpp_out=.\ E:\VMR\VMR-design\design\vmr-ps\test_vmr\proto\jobdispatch.proto
